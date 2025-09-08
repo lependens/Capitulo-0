@@ -44,7 +44,7 @@ La **evapotranspiración del cultivo de referencia** es un parámetro relacionad
 
 Este concepto nos ayuda a referenciar la capacidad de evaporación de la atmósfera independientemente del cultivo, de su manejo, o de su suelo, ya que, debido a que el agua es abundante, las condiciones del suelo y sus características no intervienen, como se ve en la Figura 2.
 
-
+![Gráfico de resultados](assets/Image2.png)
 
 Así, el valor de $ET_0$ nos permite relacionar los valores de evapotranspiración a otras superficies. Además, se puede medir la capacidad de evaporación de la atmósfera en diferentes localidades, ya que la medición se puede efectuar en superficies de las mismas características en diferentes zonas. De esta manera, $ET_0$ está relacionado con parámetros climáticos. Al no considerar ni el suelo ni el cultivo para su cálculo, y su capacidad posterior para extraer valores referenciados a otros cultivos, es una buena herramienta para estimar la evapotranspiración en una localidad y época del año.
 
