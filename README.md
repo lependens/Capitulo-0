@@ -1,5 +1,5 @@
-# Capitulo-0
-Capitulo 0: Mi TFG 7 años después
+# Capitulo-0: Mi TFG 7 años después
+
 # TFG: Implementación de redes neuronales artificiales por estimar evapotranspiración de referencia en las Islas Baleares con validación por partes
 
 Este repositorio contiene el Trabajo Fin de Grado titulado **"Estimación de la evapotranspiración de referencia (ET₀) mediante redes neuronales en las Islas Baleares"**. El objetivo del TFG era el analizar y modelar la ET₀ utilizando técnicas de aprendizaje automático mediante redes neuronales aplicando machine learning, comparando con modelos empíricos que utilizan los mimsos inputs.
