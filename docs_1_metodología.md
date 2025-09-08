@@ -244,16 +244,37 @@ El rendimiento de los modelos se evaluó mediante varios indicadores, consideran
 ---
 
 ### 1.6 Implementación con Matlab
+Traduzco y formateo en Markdown la información sobre los programas de Matlab utilizados en el estudio.
 
-El software utilizado para la implementación de todos los modelos fue **Matlab**. Se modificó la estructura de los datos de las estaciones para que fueran compatibles con Matlab y se definió la estructura para la validación k-fold y la definición de inputs. Se diseñaron varios programas para este fin, detallados en la Tabla 6.
+### 1.6 Implementación con Matlab
 
-| Nombre        | Función                                                                                             | Inputs                                          | Outputs                                                                  | Página Anexo |
-| :------------ | :-------------------------------------------------------------------------------------------------- | :---------------------------------------------- | :----------------------------------------------------------------------- | :----------- |
-| Depuradas     | Elimina filas con NaN y valores fuera del rango de ±3 desviaciones estándar.                        | -Datos estaciones -Vector fila con columnas de interés | -Datos estaciones filtrados -Datos eliminados                            | 55           |
-| Mileni        | Resta 2000 a las columnas del año para simplificar el formato.                                      | -Datos estaciones                               | -Datos estaciones                                                        | 56           |
-| Ordena2       | Divide el set de datos de cada estación por años.                                                   | -Datos estaciones                               | -Datos estaciones con estructura: 1-Estaciones, 2-Años                   | 56           |
-| Combinaciones3 | Crea combinaciones de años para la estructura k-fold (un año para test, el resto para entrenamiento). | -Datos estaciones                               | -Guía de combinaciones a seguir                                          | 56           |
-| Final         | Separa el año de test de los años de entrenamiento según la guía de combinaciones.                  | -Datos estaciones -Guía de combinaciones a seguir | -Set de datos con estructura: 1-Estaciones, 2-Combinaciones años, 3-Año test / Años entrenamiento | 57           |
-| Validación4   | Reserva un porcentaje de los datos de entrenamiento para validación cruzada (CV).                   | -Datos estaciones                               | -Datos de entrenamiento y validación                                     |              |
+El software utilizado para la implementación de todos los modelos considerados ha sido **Matlab**. Matlab es una herramienta de software matemático que ofrece un entorno de desarrollo integrado con un lenguaje de programación propio.
+
+Para que el programa integrado en Matlab pudiera entrenar las redes con los datos de las estaciones y de la manera deseada, se ha tenido que modificar la estructura original de los datos. Así, se pasó el formato de los datos de las estaciones a Matlab. Una vez implementados en el formato correspondiente de Matlab, es necesario darle a la base de datos cierta estructura para definir tanto el **k-fold** como los **inputs** de entrada de la red neuronal en cada caso.
+
+Para llevar a cabo estas modificaciones, se han diseñado varios programas, definidos en la **Tabla 6**.
 
 **Tabla 6: Programas implementados en Matlab**
+
+| Nombre | Función | Inputs | Outputs | Página anexo |
+|---|---|---|---|---|
+| Depuradades | Elimina filas con `NaN` y valores que sobrepasan 3 veces la desviación media de las columnas de interés. | -Datos estaciones\<br\>-Vector fila con las columnas de interés | -Datos estaciones filtradas\<br\>-Datos eliminados | 55 |
+| Mileni | Toma el conjunto de datos y resta 2000 a las columnas que corresponden al año. Ejemplo: "2005" pasa a ser "5". | -Datos estaciones | -Datos estaciones | 56 |
+| Ordena2 | Divide el conjunto de datos de cada estación por años, organizando los datos por estaciones y, a su vez, cada estación por años. | -Datos estaciones | -Datos estaciones con una estructura de:\<br\>1-Estaciones\<br\>2-Años | 56 |
+| Combinacions3 | Crea las combinaciones de años para cada estación, preparando la estructura "k-fold". Una combinación tendrá un año de prueba y el resto para entrenamiento. El programa solo crea las combinaciones, no las ejecuta. | -Datos estaciones | -Guía de combinaciones a seguir | 56 |
+| Final | Utiliza las combinaciones extraídas del programa `Combinacions3` para separar el año de prueba del resto de años. Se tendrán tantas combinaciones como años de datos tenga cada estación. | -Datos estaciones\<br\>-Guía de combinaciones a seguir | -Conjunto de datos con una estructura de:\<br\>1-Estaciones\<br\>2-Combinaciones años\<br\>3-Año test / Años entrenamiento | 57 |
+| Validació4 | Toma un porcentaje (%) de los datos de "training" para crear el conjunto de datos de validación. Por lo tanto, para cada combinación, se tendrá un año separado para prueba, un porcentaje de datos para validación cruzada y otro para entrenamiento. | -Datos estaciones\<br\>-Porcentaje de validación | -Conjunto de datos con una estructura de:\<br\>1-Estaciones\<br\>2-Combinaciones años\<br\>3-Año test / Años entrenamiento / Validación | 57 |
+| Inout5 | Separa los **inputs** de los **outputs**. Dentro de cada conjunto de datos (test, training y cross validations), se separan las columnas de inputs y outputs. | -Datos estaciones\<br\>-Columnas inputs (en vector)\<br\>-Columna output | -Conjunto de datos con una estructura de:\<br\>1-Estaciones\<br\>2-Combinaciones años\<br\>3-Año test / Años entrenamiento / Validación\<br\>4-Inputs / Output | 57 |
+| CONJUNT | Llama a los programas anteriores (`Mileni`, `Ordena2`, `Combinacions3`, `Final`, `Validació4`, `Inout5`) de forma sucesiva para automatizar el proceso de filtrado y preparación de la estructura de datos para el entrenamiento. | -Conjunto de inputs necesarios para los programas necesarios | -Conjunto de datos final con la estructura de `Inout5` | 58 |
+| Prova1 | Es el programa principal, encargado de entrenar las redes neuronales. Incluye otros programas para obtener el resultado final, en la siguiente secuencia: `Filtra2`, `CONJUNT`, conversión de celdas a "estructura", `Entrenatesta1Talt`, `ANN1Talt`, cálculo de errores. | -Datos estaciones\<br\>-Porcentaje de datos de "Cross Validation"\<br\>-Número de neuronas máximas a entrenar\<br\>-Número de repeticiones\<br\>-Vector con las columnas de inputs\<br\>-Columna output\<br\>-Función de activación\<br\>-Número de capas ocultas | -Resultados finales:\<br\>· Errores globales (Criterio de Validación)\<br\>· Errores por estación (Criterio de Validación)\<br\>· Errores globales (Criterio de Prueba)\<br\>· Errores por estación (Criterio de Prueba) | 58 |
+| Hgp2 | Calcula los valores de $ET\_0$ con las tres fórmulas diferentes. Primero, calcula la radiación extraterrestre con los datos de las estaciones y la latitud. Luego, calcula los valores de evapotranspiración y sus errores respecto a PM. También ajusta las ecuaciones de Hargreaves de forma anual extrayendo un coeficiente AHC para ajustar los resultados y volver a calcular los errores. | -Datos estaciones\<br\>-Latitudes de cada estación | -Valores diarios de $ET\_0$ con las diferentes fórmulas para cada estación.\<br\>-Errores respecto a PM\<br\>-Valores diarios de $ET\_0$ ajustados con AHC\<br\>-Errores de los valores ajustados respecto a PM | 61 |
+| Estandard | Calcula la media y la desviación estándar de las variables climáticas de las estaciones. | -Datos estaciones | -Medias de las variables y desviaciones estándar | 63 |
+| Arq | Recopila las arquitecturas seleccionadas con los errores más bajos. | -Resultados de las redes neuronales artificiales | -Número de neuronas seleccionadas en cada caso | 63 |
+| Anydetest | Toma los errores más bajos de cada año de prueba, considerando las diferentes repeticiones y arquitecturas. | -Resultados de las redes neuronales | -Errores más bajos para cada año de prueba por estación | 63 |
+| PMN-56 | Calcula los valores de $ET\_0$ a partir de la fórmula de PM-56. | -Datos estaciones\<br\>-Datos geográficos de las estaciones | -Valores diarios de $ET\_0$ | 63 |
+
+-----
+
+**Resumen de la metodología:**
+
+Como resumen de la metodología seguida, el **Esquema de la Figura 13** ilustra los casos contemplados en el estudio. A partir de los datos de las estaciones, se evalúan los diferentes modelos neuronales y empíricos con los valores de $ET\_0$ calculados con el modelo de **Penman-Monteith** como referencia.
