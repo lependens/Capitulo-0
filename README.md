@@ -27,7 +27,7 @@ El tratamiento de datos se realizó mediante MATLAB.
 ## Autor
 
 - **Nombre:** (Josep Maria Iglesias Franco)
-- **Nombre Tutor:** (Pau Cales Martí)
+- **Nombre Tutor:** (Pau Carles Martí)
 - **Universidad:** (UIB:  Universitat de les illes Balears)
 - **Año:** 2018
 
