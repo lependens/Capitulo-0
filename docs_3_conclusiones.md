@@ -1,3 +1,5 @@
+### 3. Conclusiones
+---
 En el estudio presentado, se evalúa la aplicación de diferentes **modelos de redes neuronales artificiales (ANN)** para estimar la evapotranspiración de referencia ($ET_0$) en las Islas Baleares. Estos modelos se comparan con ecuaciones empíricas (Hargreaves, Hargreaves y Samani, y Valiantzas) que utilizan los mismos datos de entrada. El análisis se enfoca en el rendimiento de los modelos y en la fiabilidad de la metodología de validación.
 
 ---
