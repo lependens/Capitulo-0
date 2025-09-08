@@ -59,13 +59,13 @@ La **Figura 16**  muestra los errores RRMSE de los modelos neuronales en la esta
 
 ![Gráfico de resultados](assets/figura16.png)
 
-**Figura 16.** Figura 16: Indicador AARE dels diferents models per estacions – Adimensional (-)
+**Figura 16.** Figura 16: RRMSE per any de test a l'estació 1
 
 - La **Figura 17**  muestra los errores RRMSE para la estación 3. El error es mucho más alto en el segundo año de prueba, lo que demuestra que un solo año de datos puede no ser representativo. Este elevado error es la principal razón por la que se decidió excluir la estación 3 del análisis global.
 
 ![Gráfico de resultados](assets/figura17.png)
 
-**Figura 17.** Figura 17: Indicador AARE dels diferents models per estacions – Adimensional (-)
+**Figura 17.** Figura 17: RRMSE por año de test en estación 3
 ---
 #### 1.4 Selección de la Arquitectura Óptima
 
