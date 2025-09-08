@@ -66,6 +66,7 @@ La **Figura 16**  muestra los errores RRMSE de los modelos neuronales en la esta
 ![Gráfico de resultados](assets/figura17.png)
 
 **Figura 17.** Figura 17: RRMSE por año de test en estación 3
+
 ---
 #### 1.4 Selección de la Arquitectura Óptima
 
