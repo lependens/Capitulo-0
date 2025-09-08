@@ -149,7 +149,7 @@ Se analizaron un total de **43,800 modelos neuronales**, considerando las difere
 | Estación | Años | Neuronas | Repeticiones | Combinaciones de inputs | Total   |
 | :------- | :--- | :------- | :----------- | :---------------------- | :------ |
 | 1        | 13   | 10       | 10           | 3                       | 3900    |
-| 2        | 13   |          |              |                         | 3900    |
+| 2        | 13   | 10       | 10           | 3                       | 3900    |
 | 3        | 2    |          |              |                         | 600     |
 | 4        | 13   |          |              |                         | 3900    |
 | 5        | 13   |          |              |                         | 3900    |
