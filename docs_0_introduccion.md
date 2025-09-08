@@ -20,7 +20,7 @@ Es decir, la temperatura, la radiación, la humedad atmosférica y la velocidad 
 
 El proceso de transpiración depende también de la radiación solar, la temperatura, la presión de vapor y la velocidad del viento. Pero además, a diferencia de la evaporación, el **suelo y sus características** influyen en la transpiración. La salinidad, la textura y la capacidad de conducción de agua en el suelo, entre otros, serán aspectos que modifiquen la tasa de transpiración. Además, las características del cultivo, el medio donde se trabaja, las prácticas del cultivo y su estado de desarrollo también deben ser considerados al evaluar la transpiración.
 
-![Gráfico de resultados](assets/TFG - Imágenesassets/Image1.png)
+![Gráfico de resultados](assets/TFG%20-%20Imágenesassets/Image1.png)
 
 
 
