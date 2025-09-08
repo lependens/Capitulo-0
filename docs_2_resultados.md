@@ -92,4 +92,8 @@ La **Tabla 8** muestra el número promedio de neuronas seleccionadas para cada m
 | **Media** | 7.25 | 5.97 | 7.48 | 5.61 | 8.48 | 5.17 |
 
 - En general, las arquitecturas seleccionadas por el criterio de validación tienen **más neuronas** que las seleccionadas por el criterio de prueba. Esto contradice la idea teórica de que menos neuronas mejoran la capacidad de generalización. No obstante, esto podría deberse a que el número máximo de neuronas (10) considerado en el estudio no fue suficiente para validar esa relación.
-- La **Figura 18** (no proporcionada, pero se describe) ilustra el proceso de selección de la arquitectura óptima. El gráfico muestra tres curvas de error: entrenamiento, validación y prueba. El proceso consiste en elegir la arquitectura con el menor error de validación, y luego se evalúan los resultados de esa arquitectura utilizando el conjunto de datos de prueba.
+- La **Figura 18**  ilustra el proceso de selección de la arquitectura óptima. El gráfico muestra tres curvas de error: entrenamiento, validación y prueba. El proceso consiste en elegir la arquitectura con el menor error de validación, y luego se evalúan los resultados de esa arquitectura utilizando el conjunto de datos de prueba.
+
+![Gráfico de resultados](assets/figura18.png)
+
+**Figura 17.** Figura 18: Selección de arquitectura óptima
