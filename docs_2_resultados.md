@@ -37,12 +37,14 @@ La **Tabla 7** presenta los indicadores globales promedio de los modelos, con do
 ---
 #### 1.2 Resultados por Estación
 
-Las **Figuras 14 y 15** (no proporcionadas, pero se describen) muestran los valores de AARE y MAE por estación, respectivamente, según el criterio de prueba. Los gráficos confirman que los errores de los modelos neuronales (símbolos sólidos) son menores que los de los modelos empíricos en todas las estaciones, excepto en la estación 3, debido a su limitado conjunto de datos.
+Las **Figuras 14 y 15**  muestran los valores de AARE y MAE por estación, respectivamente, según el criterio de prueba. Los gráficos confirman que los errores de los modelos neuronales (símbolos sólidos) son menores que los de los modelos empíricos en todas las estaciones, excepto en la estación 3, debido a su limitado conjunto de datos.
 
 - El modelo neuronal que mejor rinde en casi todas las estaciones es el que utiliza la humedad relativa.
 - Se observa que la diferencia de rendimiento entre los modelos que usan radiación solar y radiación extraterrestre es mínima en estaciones como **Eivissa S'estany (4)**, **Felanitx (6)** y **Son Ferriol (12)**. Esto indica que en estas estaciones, la temperatura sola podría ser suficiente para estimar la evapotranspiración, lo que contradice la tendencia general observada en los resultados globales.
 - La tendencia de los errores absolutos (MAE) es constante: los modelos con el menor error son los que usan humedad relativa, seguidos por los de radiación solar y, finalmente, los de radiación extraterrestre.
 
+![Gráfico de resultados](assets/figura14.png)
+![Gráfico de resultados](assets/figura15.png)
 ---
 #### 1.3 Resultados por Año de Prueba
 
