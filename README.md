@@ -1,4 +1,4 @@
-# Capitulo-0: Mi TFG 7 años después
+# Capitulo-0: Mi TFG (7 años después)
 
 # TFG: Implementación de redes neuronales artificiales por estimar evapotranspiración de referencia en las Islas Baleares con validación por partes
 
