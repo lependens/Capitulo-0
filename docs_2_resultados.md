@@ -53,7 +53,7 @@ Las **Figuras 14 y 15**  muestran los valores de AARE y MAE por estación, respe
 ---
 #### 1.3 Resultados por Año de Prueba
 
-La **Figura 16** (no proporcionada, pero se describe) muestra los errores RRMSE de los modelos neuronales en la estación 1 para cada año de prueba. Se observa que el modelo que generalmente tiene los errores más bajos es el que utiliza radiación solar. Los modelos de radiación extraterrestre y humedad relativa obtienen resultados variables, con errores significativamente más bajos en los años de prueba 1 y 13.
+La **Figura 16**  muestra los errores RRMSE de los modelos neuronales en la estación 1 para cada año de prueba. Se observa que el modelo que generalmente tiene los errores más bajos es el que utiliza radiación solar. Los modelos de radiación extraterrestre y humedad relativa obtienen resultados variables, con errores significativamente más bajos en los años de prueba 1 y 13.
 
 - Estas variaciones anuales evidencian la importancia de la técnica de **validación cruzada (k-fold)**, ya que un enfoque "hold-out" (que usa un solo conjunto de prueba) podría llevar a conclusiones sesgadas o solo parcialmente válidas, como al comparar los resultados del año 1 con los del año 2.
 - La **Figura 17** (no proporcionada, pero se describe) muestra los errores RRMSE para la estación 3. El error es mucho más alto en el segundo año de prueba, lo que demuestra que un solo año de datos puede no ser representativo. Este elevado error es la principal razón por la que se decidió excluir la estación 3 del análisis global.
