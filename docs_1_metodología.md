@@ -134,11 +134,13 @@ No existe un criterio único para definir la arquitectura óptima de una ANN; su
 
 La selección de los inputs para los modelos neuronales es crucial para evitar la introducción de ruido y mejorar la estimación de la $ET_0$. Se entrenaron diferentes modelos con distintas combinaciones de inputs, justificadas por fórmulas empíricas existentes. La Tabla 4 presenta las combinaciones de inputs elegidas.
 
-| Modelo Neuronal/Empírico | Nombre Red | Nombre Modelo Empírico | Nº Inputs | Inputs                                       | Output |
-| :----------------------- | :--------- | :--------------------- | :-------- | :------------------------------------------- | :----- |
-|                          |            |                        | 2         | Rs, Tmitja                                   |        |
-|                          |            |                        | 4         | Tmax, Tmin, Tmitja, Ra                       |        |
-|                          |            |                        | 5         | Tmax, Tmin, Tmitja, Ra, HR mitja             |        |
+## Modelo Neuronal/Empírico
+
+| Nombre Red   | Nombre Modelo Empírico | Nº Inputs | Inputs                                 | Output |
+| :----------- | :--------------------- | :-------- | :------------------------------------- | :----- |
+| ANN_Rs       | HG_Rs                  | 2         | Rs, Tmitja                            | Et_0   |
+| ANN_Ra       | HG_Ra                  | 4         | Tmax, Tmin, Tmitja, Ra                 | Et_0   |
+| ANN_Hr       | HG_Hr                  | 5         | Tmax, Tmin, Tmitja, Ra, HR mitja      | Et_0   |
 
 **Tabla 4: Modelos considerados en el estudio y sus respectivos inputs**
 
