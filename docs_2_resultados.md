@@ -44,7 +44,10 @@ Las **Figuras 14 y 15**  muestran los valores de AARE y MAE por estación, respe
 - La tendencia de los errores absolutos (MAE) es constante: los modelos con el menor error son los que usan humedad relativa, seguidos por los de radiación solar y, finalmente, los de radiación extraterrestre.
 
 ![Gráfico de resultados](assets/figura14.png)
+**Figura 14.** Figura 14: Indicador AARE dels diferents models per estacions – Adimensional (-)
 ![Gráfico de resultados](assets/figura15.png)
+**Figura 15.** Figura 15: Indicador MAE dels  diferents models per estacións – (mm/dia)
+
 ---
 #### 1.3 Resultados por Año de Prueba
 
