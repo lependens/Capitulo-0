@@ -1,4 +1,5 @@
 site_name: Mi TFG (7 años después)
+docs_dir: .
 nav:
   - Inicio: README.md
   - Introducción: docs_0_introduccion.md
