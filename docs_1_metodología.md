@@ -4,6 +4,8 @@
 
 Los datos para este estudio se extrajeron de **12 estaciones meteorológicas** del Sistema de Información Agroclimática para el Riego (SIAR). La información recopilada incluye **temperaturas** (máximas, mínimas y medias diarias), **humedad relativa**, **radiación solar** y **velocidades del viento**, entre otros. Además, se incluyen valores diarios de $ET_0$ calculados según el método de la FAO-Penman Monteith.
 
+![Gráfico de resultados](assets/figura6.png)
+
 Cada estación proporcionó la mayor cantidad posible de datos, resultando en un número variable de registros totales debido a diferencias en el inicio de la recolección de datos y al estado de actividad de las estaciones.
 
 La Tabla 1 detalla el **período disponible** y los **datos geográficos** de las estaciones consideradas. Se considera que los datos de estas estaciones son climáticamente normales, sin fluctuaciones drásticas en las variables. Se descartaron los datos de variables que excedían $\pm 3$ desviaciones estándar del valor medio.
@@ -81,9 +83,12 @@ Aunque las estaciones ya proporcionaban el valor de $ET_0$ calculado con el mode
 
 El funcionamiento de las redes neuronales más comunes se basa en **aprender de los errores** generados a partir de unas entradas (inputs) y una salida de referencia (output), para reajustar progresivamente los parámetros del modelo.
 
+![Gráfico de resultados](assets/figura7.png)
+
 La arquitectura de una red neuronal consta de una capa de entrada, una o varias capas ocultas y una capa de salida, con un número determinado de neurones en cada capa. Las redes neuronales utilizadas y entrenadas siguen el **algoritmo de retropropagación del error**. La retropropagación es un método de aprendizaje supervisado que permite **reajustar los pesos** asignados inicialmente de forma aleatoria, reduciendo gradualmente el error en cada iteración hasta alcanzar un error mínimo respecto al output deseado. Los outputs generados por la red se comparan con los targets, generando errores que se propagan hacia atrás para ajustar los pesos mediante un algoritmo que busca minimizar la función de error elegida, comúnmente el Error Cuadrático Medio (MSE).
 
 
+![Gráfico de resultados](assets/figura8.png)
 
 Todas las neuronas utilizadas siguen la configuración del modelo de Haykin (1999), calculando sus valores de salida mediante las siguientes fórmulas:
 
@@ -91,6 +96,8 @@ $$Z = \sum_{k=1}^{N} w_k x_k + b \quad (2)$$
 $$y = f(Z) \quad (3)$$
 
 Donde $x_k$ es la señal de entrada, $w_k$ es el peso sináptico de la neurona k, $Z$ es el combinador lineal o suma ponderada, $b$ es el término independiente o "bias", $y$ es la salida de la neurona y $f$ es la función de transferencia. La Figura 9 representa el funcionamiento de estas neuronas.
+
+![Gráfico de resultados](assets/figura9.png)
 
 #### 1.3.2 Error Evaluado en el Entrenamiento
 
@@ -119,6 +126,8 @@ Donde $J$ es la matriz Jacobiana de los errores de las neuronas de salida, $J^T$
 #### 1.3.5 Criterio de Parada del Aprendizaje
 
 Un problema en la implementación de modelos neuronales es que tienden a ajustarse excesivamente a los datos de entrenamiento, perdiendo capacidad de generalización con datos nuevos. Para evitar el fenómeno de **sobreajuste (overfitting)**, se aplicó la técnica de **parada anticipada (early stopping)**.
+
+![Gráfico de resultados](assets/figura10.png)
 
 Este método consiste en separar una parte de los datos (15% de los datos de entrenamiento) como **conjunto de datos de validación cruzada (CV)**. Este conjunto se utiliza para controlar el grado de sobreajuste. El entrenamiento se detiene cuando el error en el conjunto de CV deja de disminuir. Se estableció un límite máximo de 100 iteraciones para evitar cargas de tiempo excesivas.
 
