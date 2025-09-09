@@ -53,6 +53,8 @@ Así, el valor de $ET_0$ nos permite relacionar los valores de evapotranspiraci�
 
 Este concepto de **evapotranspiración del cultivo bajo condiciones estándar** es la evapotranspiración que presenta cualquier cultivo sin enfermedades, con buena fertilización, en parcelas extensas, bajo condiciones de suelo y agua propicias donde se consigue la máxima producción de acuerdo con las condiciones climáticas que se presentan.
 
+![Gráfico de resultados](assets/figura3.png)
+
 La evapotranspiración de cultivo se puede calcular a partir del valor de $ET_0$ multiplicado por un coeficiente extraído experimentalmente. Debido a la falta de información para los diferentes cultivos, no hay parámetros que se puedan relacionar directamente con una fórmula para extraerlo directamente como tal.
 
 
@@ -65,7 +67,7 @@ Aún así, este valor de $ET_c$ varía según propiedades aerodinámicas, albedo
 
 Como hemos visto anteriormente, las condiciones descritas como "estándar" difícilmente son las que se tienen en la realidad. Bajo condiciones de campo, pueden intervenir otros factores generalmente no deseados, como un elevado nivel de salinidad en el suelo, presencia de plagas y enfermedades, baja fertilidad, crecimiento de plantas no deseadas, menor densidad de plantas, etc. Estas alteraciones pueden influir en el valor de la evapotranspiración y tener valores diferentes a los que estimaríamos con $ET_c$.
 
-
+![Gráfico de resultados](assets/figura4.png)
 
 Por lo tanto, la evapotranspiración del cultivo bajo condiciones no estándar, $ET_{c,ajustada}$, se calcula utilizando un **coeficiente de cultivo, $K_c$, ajustado** por diferentes condiciones de estrés y limitaciones que se presenten. Otra opción es ajustar $ET_c$ con otro coeficiente, $K_s$, que introduce el efecto de estrés hídrico que se tenga.
 
@@ -111,7 +113,7 @@ Las redes neuronales son capaces de detectar propiedades mucho más complejas en
 
 El funcionamiento neuronal biológico consiste en una red donde millones de neuronas están interconectadas. En la Figura 5 se representa una neurona y sus partes. El sistema artificial pretende recrear el sistema biológico.
 
-
+![Gráfico de resultados](assets/figura5.png)
 
 Las redes neuronales artificiales están formadas por un número determinado de procesadores, o neuronas, dispuestos en varias capas e interconectados entre sí mediante conexiones a las que se les asigna un factor de ponderación o peso. De esta manera, realizan cálculos simples basados en la información que reciben de las neuronas, o procesadores vecinos. Una de las características de las redes neuronales es que no siguen unas reglas escritas, sino que se basan en aprender, donde los pesos de las conexiones que se han asignado aleatoriamente al principio se van ajustando progresiva y automáticamente para poder resolver el problema en cuestión.
 

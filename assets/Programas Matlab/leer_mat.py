@@ -1,7 +1,7 @@
 import scipy.io
 import h5py
 
-filename = "assets/Programas Matlab/TFG final.mat"
+filename = "assets/Programas Matlab/TFG workspace.mat"
 
 try:
     data = scipy.io.loadmat(filename)
