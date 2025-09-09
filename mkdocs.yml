@@ -1,0 +1,10 @@
+site_name: Mi TFG (7 años después)
+docs_dir: .
+nav:
+  - Inicio: README.md
+  - Introducción: docs_0_introduccion.md
+  - Metodología: docs_1_metodología.md
+  - Resultados: docs_2_resultados.md
+  - Conclusiones: docs_3_conclusiones.md
+theme:
+  name: material
