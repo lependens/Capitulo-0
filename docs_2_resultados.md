@@ -98,4 +98,4 @@ La **Tabla 8** muestra el número promedio de neuronas seleccionadas para cada m
 
 **Figura 17.** Figura 18: Selección de arquitectura óptima
 
-- [Conclusiones](docs_3_conclusiones.md)
+### [Conclusiones](docs_3_conclusiones.md)

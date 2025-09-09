@@ -160,4 +160,4 @@ Este estudio presenta los siguientes objetivos:
 * Aplicar Matlab para llevar a cabo todos los procedimientos estudiados.
 
 
-- [Metodología](docs_1_metodología.md)
+### [Metodología](docs_1_metodología.md)
