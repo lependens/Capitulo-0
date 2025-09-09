@@ -158,3 +158,6 @@ Este estudio presenta los siguientes objetivos:
 * Proponer modelos neuronales artificiales basados en pocas variables de entrada como alternativa a los modelos convencionales existentes.
 * Aplicar un procedimiento robusto de validación de los modelos, la validación por partes, como alternativa al método hold-out, habitual en la práctica.
 * Aplicar Matlab para llevar a cabo todos los procedimientos estudiados.
+
+
+- [Metodología](docs_1_metodología.md)
